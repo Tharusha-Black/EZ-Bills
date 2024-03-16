@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.Cashier.AdminCashierController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <bottom>
+            <StackPane prefHeight="124.0" prefWidth="371.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="88.0" prefWidth="371.0" style="-fx-background-color: #93EEF0;">
+                     <children>
+                        <Button fx:id="AdminCashierAdd" mnemonicParsing="false" onAction="#AddNewCashier" prefHeight="50.0" prefWidth="90.0" stylesheets="@../../FXML/ButtonsShape1.css" text="ADD">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="AdminCashierUpdate" fx:id="AdminCashierUpdate" mnemonicParsing="false" onAction="#UpdateCashier" prefHeight="50.0" prefWidth="90.0" stylesheets="@../../FXML/ButtonsShape1.css" text="UPDATE">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="AdminCashierDelete" fx:id="AdminCashierDelete" mnemonicParsing="false" onAction="#DeleteCashier" prefHeight="50.0" prefWidth="90.0" stylesheets="@../../FXML/ButtonsShape1.css" text="DELETE">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+         </bottom>
+         <right>
+            <TableView id="AdminCashierTable" fx:id="AdminCashierTable" prefHeight="502.0" prefWidth="702.0" style="-fx-background-color: #93EEF0;" stylesheets="@../../FXML/TableStyle1.css" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="IDTCol" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="NameTCol" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="NoTCol" prefWidth="75.0" text="Mobile No" />
+                  <TableColumn fx:id="AddTCol" prefWidth="75.0" text="Address" />
+                  <TableColumn fx:id="EmailTCol" prefWidth="75.0" text="Email" />
+                  <TableColumn fx:id="PwdTCol" prefWidth="75.0" text="Password" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem id="TableMenuEdit" fx:id="TableMenuEdit" mnemonicParsing="false" onAction="#Editor" text="Edit" />
+                        <MenuItem fx:id="TableMenuRefresh" mnemonicParsing="false" onAction="#LoadData" text="Refresh" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+         </right>
+         <center>
+            <AnchorPane prefHeight="502.0" prefWidth="418.0" style="-fx-background-color: #93EEF0;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="502.0" prefWidth="371.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="502.0" prefWidth="186.0" style="-fx-background-color: #93EEF0;">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cashier ID :" wrappingWidth="170.0">
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" top="70.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cashier Name :" wrappingWidth="170.0">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number :" wrappingWidth="170.0">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" wrappingWidth="162.02035522460938">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" wrappingWidth="170.0">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" wrappingWidth="170.0">
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="502.0" prefWidth="299.0" style="-fx-background-color: #93EEF0;">
+                           <children>
+                              <TextField id="AdminCashierID" fx:id="AdminCashierID" prefHeight="7.0" prefWidth="257.0">
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" left="20.0" right="20.0" top="75.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField id="AdminCashierName" fx:id="AdminCashierName">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="20.0" right="20.0" top="30.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField id="AdminCashierNo" fx:id="AdminCashierNo">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="20.0" right="20.0" top="30.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField id="AdminCashierAddress" fx:id="AdminCashierAddress">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="20.0" right="20.0" top="30.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField id="AdminCashierEmail" fx:id="AdminCashierEmail">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="20.0" right="20.0" top="30.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField id="AdminCashierPwd" fx:id="AdminCashierPwd">
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" left="20.0" right="20.0" top="30.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

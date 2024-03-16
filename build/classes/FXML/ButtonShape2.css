@@ -1,0 +1,16 @@
+   Button{
+    -fx-background-color: linear-gradient(#EA8E0A, #be1d00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: black;
+   }
+   Button:hover{
+       -fx-background-color: linear-gradient(#E93717, #700606);;
+       -fx-text-fill: white;
+       
+   }
+   button:pressed{
+       -fx-background-color: linear-gradient(#E93717, #700606);
+       -fx-text-fill: white;
+        -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+   }

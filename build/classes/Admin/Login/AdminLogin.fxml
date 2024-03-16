@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane id="AdminLoginMainPane" fx:id="AdminLoginMainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #93EEF0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.Login.AdminLoginController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="213.0" prefWidth="640.0" style="-fx-background-color: #93EEF0;" AnchorPane.bottomAnchor="-13.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Text fontSmoothingType="LCD" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Login" wrappingWidth="331.64844512939453">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Lucida Sans Typewriter Regular" size="49.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="148.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="140.0" prefWidth="640.0" style="-fx-background-color: #93EEF0;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="191.0" prefWidth="49.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Name :">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pasword     :">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="191.0" prefWidth="253.0">
+                           <children>
+                              <TextField id="AdminLoginUNTxtBox" fx:id="AdminLoginUNTxtBox" prefHeight="21.0" prefWidth="255.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <PasswordField id="AdminLoginPWDBox" fx:id="AdminLoginPWDBox">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <ImageView fx:id="LoginShowPwd" fitHeight="14.0" fitWidth="14.0" onMouseClicked="#ShowPwd" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@spy.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="190.0" top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="138.0" prefWidth="640.0" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <HBox alignment="CENTER" layoutY="-2.0" prefHeight="143.0" prefWidth="640.0" style="-fx-background-color: #93EEF0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+                     <children>
+                        <Button id="AdminLoginBackBtn" fx:id="AdminLoginBackBtn" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#LoadBackMenu" prefHeight="50.0" prefWidth="80.0" stylesheets="@../../FXML/ButtonsShape1.css" text="Back">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button id="AdminLoginBtn" fx:id="AdminLoginBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#LoadAdminMainFrame" prefHeight="50.0" prefWidth="80.0" stylesheets="@../../FXML/ButtonsShape1.css" text="Login">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>
